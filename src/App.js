@@ -19,8 +19,9 @@ export default class App extends Component{
   render() {
     return (
         <div>
-    <h1>Пример нескольки вариантов</h1>
-    <CheckBox />
+    <h1>Пример нескольких вариантов</h1>
+        <CheckBox />
+        <br></br>
     <CheckBox />
     <h2>Пример выбора только одного варианта</h2>
   

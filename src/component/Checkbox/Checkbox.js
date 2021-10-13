@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import './checkbox.css'
 
 export default class CheckBox extends Component{
     state = {
@@ -15,20 +16,31 @@ export default class CheckBox extends Component{
     }
 
     render() {
+        const { one, two, three } = this.state;
         return (
             <form>
-                <label>
-                    <input type="checkbox" name="one" onChange={this.handleChange} checked={ this.state.one}/>
+                <div className="container">
+                     
+                      <label className="label">
+                        <input type="checkbox" name="one" onChange={this.handleChange} className="checkbox" checked={this.state.one} />
+                       <span className="icon-checkbox" style={{ backgroundColor: one ? 'yellow': ' '  }}></span>
                     100 ml
                 </label>
-                <label>
-                    <input type="checkbox" name="two" onChange={this.handleChange} checked={ this.state.two}/>
-                    200 ml
+                  </div>
+                <div className="container">
+                      <label className="label">
+                    <input type="checkbox" name="two" onChange={this.handleChange} className="checkbox" checked={ this.state.two}/>
+                    <span className="icon-checkbox" style={{ backgroundColor: two ? 'yellow': ' '  }}></span>
+                        200 ml
                 </label>
-                <label>
-                    <input type="checkbox" name="three" onChange={this.handleChange} checked={ this.state.three}/>
-                    300 ml
+                  </div>
+                <div className="container">
+                     <label className="label">
+                    <input type="checkbox" name="three" onChange={this.handleChange} className="checkbox" checked={ this.state.three}/>
+                    <span className="icon-checkbox" style={{ backgroundColor: three ? 'yellow': ' '  }}></span>
+                        300 ml
                 </label>
+               </div>
             </form>
         )
     }
